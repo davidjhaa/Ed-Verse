@@ -1,0 +1,102 @@
+/* .homePage {
+  width: 100vw;
+  background-color: #eef2f5;
+  overflow-x: hidden;
+}
+
+.lamp{
+  top: -10px;
+}
+
+.content{
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  width: 100vw;
+}
+
+.welcomeNote{
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top:60px;
+}
+
+.courses{
+  margin-top: 40px;
+  display: flex;
+  gap: 3.4rem;
+  justify-content: center;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+} */
+
+.homePage {
+  width: calc(100vw - 12px); /* Adjust for scrollbar width */
+  background-color: #eef2f5;
+  overflow-y: auto; 
+  position: relative;
+  padding-right: 12px; /* Ensure the scrollbar doesn't cause horizontal overflow */
+}
+
+.lamp {
+  top: -10px;
+}
+
+.content {
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  width: 100%; /* Ensure it takes full width of the homePage */
+}
+
+.welcomeNote {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+
+.courses {
+  margin-top: 40px;
+  display: flex;
+  gap: 3.4rem;
+  justify-content: center;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
