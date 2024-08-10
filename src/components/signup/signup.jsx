@@ -18,6 +18,10 @@ const Signup = () => {
     confirmPassword: "",
   });
 
+  const signUpwithgoogle = ()=>{
+    window.open("http://localhost:8000/auth/google/callback","_self")
+  }
+
   const validationSchema = Yup.object({
     name: Yup.string().required("Please Enter Your Name"),
     email: Yup.string()
@@ -75,7 +79,7 @@ const Signup = () => {
           <div className={styles.content}>
             <h2 className={styles.title}>Create Account</h2>
             <div className={styles.form__icons}>
-              <FcGoogle className={styles.formIcon} alt="icon1" />
+              <FcGoogle onClick={signUpwithgoogle} className={styles.formIcon} alt="icon1" />
               <FaFacebook className={styles.formIcon2} alt="icon2" />
               <IoLogoTwitter className={styles.formIcon3} alt="icon3" />
             </div>

@@ -8,6 +8,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
 import { IoLogoTwitter } from "react-icons/io5";
+import { MdOutlineMailOutline } from "react-icons/md";
+
 
 const Login = () => {
   const navigate = useNavigate();
@@ -17,6 +19,10 @@ const Login = () => {
     password: "",
     confirmPassword: "",
   });
+
+  const loginwithgoogle = ()=>{
+    window.open("http://localhost:8000/auth/google/callback","_self")
+  }
 
   const validationSchema = Yup.object({
     email: Yup.string()
@@ -57,13 +63,26 @@ const Login = () => {
           <div className={styles.content}>
             <h2 className={styles.title}>Log In</h2>
             <div className={styles.form__icons}>
-              <FcGoogle className={styles.formIcon} alt="icon1" />
+              <FcGoogle onClick={()=> loginwithgoogle()} className={styles.formIcon} alt="icon1" />
               <FaFacebook className={styles.formIcon2} alt="icon2" />
               <IoLogoTwitter className={styles.formIcon3} alt="icon3" />
             </div>
             <span className={styles.formSpan}>
               or use email for login
             </span>
+            {/* <div className={styles.email}>
+              <div className={styles.inputbox}>
+                <MdOutlineMailOutline className={styles.icon} />
+                <input
+                  className={styles.input}
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  type="email"
+                  placeholder="Email"
+                />
+              </div>
+            </div> */}
             <input
               className={styles.formInput}
               type="text"
@@ -71,7 +90,7 @@ const Login = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-            />
+            />            
             <input
               className={styles.formInput}
               type="password"

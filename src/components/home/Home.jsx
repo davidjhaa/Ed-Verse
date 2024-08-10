@@ -2,7 +2,8 @@ import React from "react";
 import Navbar from "../Navbar/Navbar";
 import styles from "./Home.module.css";
 import Course from "../course/course";
-import ContactForm from "../footer/contactForm";
+import ContactForm from "../contactUs/ContactForm";
+import Footer from "../footer/Footer";
 import { useRef } from "react";
 
 const Home = () => {
@@ -50,6 +51,7 @@ const Home = () => {
       <div ref={contactUsRef}>
         <div style={{padding:'100px 0 0 0'}}>
           <ContactForm  />
+          <Footer />
         </div>
       </div>
     </div>

@@ -147,12 +147,30 @@
   height: 48px;
   margin-bottom: 8px;
   padding-left: 25px;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
   font-family: "Montserrat", sans-serif;
   background-color: #ecf0f3;
   transition: 0.25s ease;
   border-radius: 8px;
   box-shadow: inset 2px 2px 4px #d1d9e6, inset -2px -2px 4px #f9f9f9;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: rgb(166, 157, 157);
+  margin-right: 0.3rem;
+}
+
+.input{
+  padding: 0.5em;
+  border: none;
+  font-size: 1rem;
+  color: rgb(166, 157, 157);
+  width: 100%;
+  outline: none;
 }
 
 .forgetPassword{
